@@ -5,7 +5,10 @@ if (params.get("p") != null) {
     resp.text().then((text) => {
       document.getElementById("code").value = text;
       console.log(text);
+      const [decodedName, decodedTrack] = decodeTrackCode(text);
 
+      console.log(decodedName);
+      console.log(decodedTrack);
       //getLeaderboard(text);
     });
   });
