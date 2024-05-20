@@ -1,3 +1,5 @@
+//TODO this is throwing an error
+
 //track encoding ported back to js by @jblitzar
 
 const base62 = {
