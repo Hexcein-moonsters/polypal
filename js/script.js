@@ -22,24 +22,8 @@ async function getLeaderboard(code) {
   //sha256 not working
   //TODO: chore: investigate hashing
   const resp = await fetch(
-    `https://vps.kodub.com:43273/leaderboard?version=0.3.1&trackId=${code}&skip=0&amount=20`,
+    `https://corsproxy.io?${encodeURIComponent("https://vps.kodub.com:43273/leaderboard?version=0.3.1&trackId=${code}&skip=0&amount=20")}`,
     {
-      headers: {
-        accept: "*/*",
-        "accept-language": "en-US,en;q=0.9,es;q=0.8",
-        "cache-control": "no-cache",
-        pragma: "no-cache",
-        priority: "u=1, i",
-        "sec-ch-ua":
-          '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-site",
-      },
-      referrer: "https://app-polytrack.kodub.com/",
-      body: null,
       method: "GET"
     }
   );
