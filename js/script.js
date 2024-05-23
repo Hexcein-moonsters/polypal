@@ -17,8 +17,8 @@ if (params.get("p") != null) {
 async function getLeaderboard(code) {
   code = await sha256(code);
 
-  //sha256 not working, plus cors errors
-  //TODO: chore:  cors proxy + investigate hashing
+  //sha256 not working
+  //TODO: chore: investigate hashing
   const resp = await fetch(
     `https://vps.kodub.com:43273/leaderboard?version=0.3.1&trackId=${code}&skip=0&amount=20`,
     {
@@ -38,9 +38,7 @@ async function getLeaderboard(code) {
       },
       referrer: "https://app-polytrack.kodub.com/",
       body: null,
-      method: "GET",
-      mode: "cors",
-      credentials: "omit",
+      method: "GET"
     }
   );
   const json = await resp.json();
