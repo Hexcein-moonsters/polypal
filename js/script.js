@@ -17,6 +17,8 @@ if (params.get("p") != null) {
 async function getLeaderboard(code) {
   code = await sha256(code);
 
+  //CORS errors still present
+
   //sha256 not working
   //TODO: chore: investigate hashing
   const resp = await fetch(
