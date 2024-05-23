@@ -9,7 +9,7 @@ if (params.get("p") != null) {
 
       console.log(decodedName);
       console.log(decodedTrack);
-      //getLeaderboard(text);
+      getLeaderboard(text);
     });
   });
 }
