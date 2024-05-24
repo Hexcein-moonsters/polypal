@@ -29,7 +29,7 @@ async function getLeaderboard(code) {
   );
   const json = await resp.json();
 
-  document.getElementById("leaderboard").innerText = json;
+  document.getElementById("leaderboard").innerText = JSON.stringify(json);
 }
 
 async function sha256(message) {
