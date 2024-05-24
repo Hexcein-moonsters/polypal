@@ -17,12 +17,12 @@ if (params.get("p") != null) {
 async function getLeaderboard(code) {
   code = await sha256(code);
 
-  //CORS errors still present
+
 
   //sha256 not working
   //TODO: chore: investigate hashing
   const resp = await fetch(
-    `https://corsproxy.io?${encodeURIComponent("https://vps.kodub.com:43273/leaderboard?version=0.3.1&trackId=${code}&skip=0&amount=20")}`,
+    `https://polypal-leaderboard.vercel.app/leaderboard?trackId=${code}`,
     {
       method: "GET"
     }
